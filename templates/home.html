@@ -1,15 +1,14 @@
 <html>
 <body>
-    <div class="login">
-       <h1>Student Exam Performance Indicator</h1>
+    <div class="login" style="width: 50%; margin: 50px auto; padding: 20px; background-color: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+       <h1 style="text-align: center; color: #333;">Student Exam Performance Indicator</h1>
    
        <form action="{{ url_for('predict_datapoint')}}" method="post">
-        <h1>
-            <legend>Student Exam Performance Prediction</legend>
+        <h1 style="text-align: center; color: #333;">
         </h1>
-        <div class="mb-3">
-            <label class="form-label">Gender</label>
-            <select class="form-control" name="gender" placeholder="Enter you Gender" required>
+        <div class="mb-3" style="margin-bottom: 20px;">
+            <label class="form-label" style="display: block; margin-bottom: 10px;">Gender</label>
+            <select class="form-control" name="gender" placeholder="Enter you Gender" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
                 <option class="placeholder" selected disabled value="">Select your Gender</option>
                 <option value="male">
                     Male
@@ -19,9 +18,9 @@
                 </option>
             </select>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Race or Ethnicity</label>
-            <select class="form-control" name="ethnicity" placeholder="Enter you ethnicity" required>
+        <div class="mb-3" style="margin-bottom: 20px;">
+            <label class="form-label" style="display: block; margin-bottom: 10px;">Race or Ethnicity</label>
+            <select class="form-control" name="ethnicity" placeholder="Enter you ethnicity" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
                 <option class="placeholder" selected disabled value="">Select Ethnicity</option>
                 <option value="group A">
                     Group A
@@ -40,10 +39,9 @@
                 </option>
             </select>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Parental Level of Education</label>
-            <select class="form-control" name="parental_level_of_education"
-                placeholder="Enter you Parent Education" required>
+        <div class="mb-3" style="margin-bottom: 20px;">
+            <label class="form-label" style="display: block; margin-bottom: 10px;">Parental Level of Education</label>
+            <select class="form-control" name="parental_level_of_education" placeholder="Enter you Parent Education" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
                 <option class="placeholder" selected disabled value="">Select Parent Education</option>
                 <option value="associate's degree">
                     associate's degree
@@ -65,9 +63,9 @@
                 </option>
             </select>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Lunch Type</label>
-            <select class="form-control" name="lunch" placeholder="Enter you Lunch" required>
+        <div class="mb-3" style="margin-bottom: 20px;">
+            <label class="form-label" style="display: block; margin-bottom: 10px;">Lunch Type</label>
+            <select class="form-control" name="lunch" placeholder="Enter you Lunch" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
                 <option class="placeholder" selected disabled value="">Select Lunch Type</option>
                 <option value="free/reduced">
                     free/reduced
@@ -77,11 +75,9 @@
                 </option>
             </select>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Test preparation Course</label>
-            <select class="form-control" name="test_preparation_course" placeholder="Enter you Course"
-                required>
-                <option class="placeholder" selected disabled value="">Select Test_course</option>
+        <div class="mb-3" style="margin-bottom: 20px;">
+            <label class="form-label" style="display: block; margin-bottom: 10px;">Test preparation Course</label>
+            <select class="form-control" name="test_preparation_course" placeholder="Enter you Course" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc;">
                 <option value="none">
                     None
                 </option>
@@ -90,22 +86,25 @@
                 </option>
             </select>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Writing Score out of 100</label>
-            <input class="form-control" type="number" name="reading_score"
-                placeholder="Enter your Reading score" min='0' max='100' />
+        <div class="mb-3" style="margin-bottom: 20px;">
+            <label class="form-label" style="display: block; margin-bottom: 10px;">Writing Score out of 100</label>
+            <input type="number" class="form-control" name="writing_score" placeholder="Enter your Writing Score" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
+         </div>
+        <div class="mb-3" style="margin-bottom: 20px;">
+            <label class="form-label" style="display: block; margin-bottom: 10px;">Reading Score out of 100</label>
+            <input type="number" class="form-control" name="reading_score" placeholder="Enter your Reading Score" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
         </div>
-        <div class="mb-3">
-            <label class="form-label">Reading Score out of 100</label>
-            <input class="form-control" type="number" name="writing_score"
-                placeholder="Enter your Reading Score" min='0' max='100' />
+        <div class="mb-3" style="margin-bottom: 20px; text-align: center;">
+            <button class="btn btn-primary" type="submit" style="padding: 10px 20px; font-size: 16px; border-radius: 10px; background-color: #5391bb; text-decoration: whitesmoke; border: none;">
+                <i class="fa fa-predict" aria-hidden="true"></i> Submit
+            </button>
         </div>
-        <div class="mb-3">
-            <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
+        </form>
+        <div class="result-container" style="text-align: center; margin-top: 20px;">
+            <h2>Prediction Score:</h2>
+            <h1 style="font-size: 48px; font-weight: bold; color: #7e9960;">{{results}}</h1>
+            <p style="font-size: 18px; color: #666;">Your predicted math score is above!</p>
         </div>
-    </form>
-    <h2>
-       THE  prediction is {{results}}
-    </h2>
-   <body>
-</html>
+        </div>
+    </body>
+    </html>
