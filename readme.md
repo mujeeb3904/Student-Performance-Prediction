@@ -23,9 +23,13 @@ The project aims to develop a machine learning model that predicts student perfo
 
 
  **Technologies Used:**
+ 
  **Machine learning:** scikit-learn
+ 
  **Data preprocessing:** Pandas, NumPy, Matplotlib, Seaborn
+ 
  **Web development:** Flask, HTML, CSS
+ 
  **Deployment:** AWS, Azure, Docker Hub, Ubuntu, EC2, CI/CD
 
 
